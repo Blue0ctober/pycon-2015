@@ -1,0 +1,37 @@
+exercise objects and names
+
+╭─evaldes@B0-MBA.local ~
+╰─➤  python3
+Python 3.4.3 (default, Apr  9 2015, 08:02:15)
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> i
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'i' is not defined
+>>> dir()
+['__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__']
+>>> i = 1
+>>> i
+1
+>>> dir()
+['__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'i']
+>>> type(i)
+<class 'int'>
+>>> j = i
+>>> i is j
+True
+>>> m = n = [1, 2, 3,]
+>>> m
+[1, 2, 3]
+>>> n
+[1, 2, 3]
+>>> m is n
+True
+>>> dir()
+['__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'i', 'j', 'm', 'n']
+>>> m[1] = 'two'
+>>> m
+[1, 'two', 3]
+>>> n
+[1, 'two', 3]
