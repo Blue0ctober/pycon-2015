@@ -35,3 +35,9 @@ True
 [1, 'two', 3]
 >>> n
 [1, 'two', 3]
+>>> n[2] = 'three'
+>>> m
+[1, 'two', 'three']
+>>> n
+[1, 'two', 'three']
+>>>
