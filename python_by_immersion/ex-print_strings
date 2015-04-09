@@ -1,0 +1,24 @@
+>>> sorted('hello')
+['e', 'h', 'l', 'l', 'o']
+>>> sorted('hello', reverse=True)
+['o', 'l', 'l', 'h', 'e']
+>>> reversed('hello')
+<reversed object at 0x10251e630>
+>>> list(reversed('hello'))
+['o', 'l', 'l', 'e', 'h']
+>>> 'hello'.upper()
+'HELLO'
+>>> 'HELLO'.isupper()
+True
+>>> 'hello'.title()
+'Hello'
+>>> 'Hello'.istitle()
+True
+>>> 'hello world'.title()
+'Hello World'
+>>> 'hello world'.title().swapcase()
+'hELLO wORLD'
+>>> 'he' in 'hello'
+True
+>>> '!' in '.?!'
+True

@@ -1,0 +1,114 @@
+╭─evaldes@B0-MBA.local ~
+╰─➤  python3
+Python 3.4.3 (default, Apr  9 2015, 08:02:15)
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> r'hello'
+'hello'
+>>> r'hello' is
+  File "<stdin>", line 1
+    r'hello' is
+               ^
+SyntaxError: invalid syntax
+>>> r'hello' is 'hello'
+True
+>>> r'hello\n'
+'hello\\n'
+>>> r'hello\n' == 'hello\n'
+False
+>>> len(r'hello\n')
+7
+>>> len('hello\n')
+6
+>>> s = 'moby'
+>>> len(m) > 3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'm' is not defined
+>>> len(m) is great 3
+  File "<stdin>", line 1
+    len(m) is great 3
+                    ^
+SyntaxError: invalid syntax
+>>> len(s) is great 3
+  File "<stdin>", line 1
+    len(s) is great 3
+                    ^
+SyntaxError: invalid syntax
+>>> len(s) > 3
+True
+>>> 2 * 'hello'
+'hellohello'
+>>> 2 + 'hello'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> 'hello' + 'there'
+'hellothere'
+>>> 'hello' 'there'
+'hellothere'
+>>> type('hello')
+<class 'str'>
+>>> u'hello'
+'hello'
+>>> type(u'hello')
+<class 'str'>
+>>> s2 = '$'
+>>> s2
+'$'
+>>> s3 = '\u0024'
+>>> s3
+'$'
+>>> s4 = '\N{dollar sign}'
+>>> s4
+'$'
+>>> s2 == s3 == s4
+True
+>>> i = 12
+>>> dir(1)
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+>>> dir(i)
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+>>> i.__doc__
+"int(x=0) -> integer\nint(x, base=10) -> integer\n\nConvert a number or string to an integer, or return 0 if no arguments\nare given.  If x is a number, return x.__int__().  For floating point\nnumbers, this truncates towards zero.\n\nIf x is not a number or if base is given, then x must be a string,\nbytes, or bytearray instance representing an integer literal in the\ngiven base.  The literal can be preceded by '+' or '-' and be surrounded\nby whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.\nBase 0 means to interpret the base from the string as an integer literal.\n>>> int('0b100', base=0)\n4"
+>>> i.__str__
+<method-wrapper '__str__' of int object at 0x10148de20>
+>>> i.__str__()
+'12'
+>>> s2
+'$'
+>>> s2.encode
+<built-in method encode of str object at 0x1016961b8>
+>>> s2.encode()
+b'$'
+>>> s2.encode(encoding='ascii')
+b'$'
+>>> s2.encode() == '$'
+False
+>>> type(s2)
+<class 'str'>
+>>> type(s2.encode())
+<class 'bytes'>
+>>> s5 =
+  File "<stdin>", line 1
+    s5 =
+        ^
+SyntaxError: invalid syntax
+>>> s5 = 'Pound sign:\N{pound sign}:'
+>>> s5.encode()
+b'Pound sign:\xc2\xa3:'
+>>> s5
+'Pound sign:£:'
+>>> s5.encode('ignore')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+LookupError: unknown encoding: ignore
+>>> s5.encode(errors='ignore')
+b'Pound sign:\xc2\xa3:'
+>>> s5.encode('ascii', errors='ignore')
+b'Pound sign::'
+>>> s5.encode('ascii', 'ignore')
+b'Pound sign::'
+>>> s5.encode('ascii', 'replace')
+b'Pound sign:?:'
+>>>
